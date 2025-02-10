@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Byekan;
+    transition: all 200ms ease;
+}
+
+
+@font-face {
+    font-family: Byekan;
+    src: url(fonts/Byekan.ttf), format("truetype");
+}
+
+
+
+body{
+    background: linear-gradient(242.69deg, rgba(0, 0, 0, 0.9) 0.68%, rgba(189, 72, 0, 0.9) 99.32%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes playListShow{
+    0%{
+        position: relative;
+        left: -331px;
+        display: inline;
+    }
+
+    100%{
+        position: relative;
+        left: 30px;
+        
+    }
+}
+@keyframes playListHide{
+    0%{
+        position: relative;
+        left: 30px;
+    }
+
+    100%{
+        position: relative;
+        left: -331px;
+        /* display: none; */
+    }
+}
+@keyframes goPlayerSideOpenPlaylist{
+    0%{
+        position: relative;
+        left: 165px;
+        display: inline;
+    }
+
+    100%{
+        position: relative;
+        left: 0px;
+        
+    }
+}
+@keyframes goPlayerSideClosePlaylist{
+    0%{
+        position: relative;
+        left: 0px;
+    }
+
+    100%{
+        position: relative;
+        left: 165px;
+    }
+}
+
+.musicPlayerContainer{
+    display: flex;
+}
+
+
+
+.musicPlayerContainer .playerContainer{
+    width: 610px;
+    z-index: 1;
+    height: 900px;
+    border-radius: 80px;
+    position: relative;
+    left: 165.5px;
+    background: linear-gradient(32.59deg, rgba(0, 0, 0, 1) 1.21%, rgba(123, 47, 0, 1) 98.79%);
+    box-shadow: 0px -5px 15px 0px rgba(123, 47, 0, 0.5) inset;
+
+    box-shadow: 5px 0px 15px 0px rgba(123, 47, 0, 0.5) inset;
+    
+    box-shadow: 0px 5px 15px 0px rgba(255, 255, 255, 0.5) inset;
+    
+    box-shadow: -5px 0px 15px 0px rgba(255, 255, 255, 0.5) inset;
+}
+
+
+
+.musicPlayerContainer .playerContainer .musicImage{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    top:60px;
+    margin: auto;
+    box-shadow: 0px 0px 30px -10px white;
+    border-radius: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.musicPlayerContainer .playerContainer .musicTitle{
+    font-size: 30px;
+    height: 50px;
+    text-align: center;
+    width: 80%;
+    margin: 90px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    /* overflow: hidden; */
+    word-wrap: break-word;
+    /* white-space: wrap; */
+
+}
+
+
+.musicPlayerContainer .playerContainer .progressBarContainer{
+    width: 470px;
+    height: 50px;
+    margin: 10px auto 0;
+}
+
+
+.musicPlayerContainer .playerContainer .progressBarContainer .progressBarTime{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+
+
+.musicPlayerContainer .playerContainer .progressBarContainer .progressBarCapsool{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+.musicPlayerContainer .playerContainer .progressBarContainer .progress{
+    width: 0;
+    height: 10px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: end;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+ .progressBarContainer .progress .circle{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
+.musicPlayerContainer .playerContainer .navigationContainer{
+    width: 470px;
+    height: 100px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.musicPlayerContainer .playerContainer .navigation .circle{
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(218.53deg, #8E0000 4.51%, #FE9D00 95.49%);
+    border-radius: 50%;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.musicPlayerContainer .playerContainer .navigation *{
+    cursor: pointer;
+}
+
+
+.musicPlayerContainer .playerContainer .navigation:hover{
+    transform: scale(1.02);
+}
+
+
+.musicPlayerContainer .playerContainer .navigation:active{
+    transform: scale(0.9);
+}
+
+
+.musicPlayerContainer .playerContainer .playListButton{
+    width: 470px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-top: 2px solid white;
+    margin: 30px auto 0;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.musicPlayerContainer .playerContainer .playListButton:hover{
+    color: orange;
+}
+
+
+.musicPlayerContainer .playlistContainer{
+    width: 311px;
+    height: 825px;
+    z-index: 0;
+    border-radius: 60px 60px 60px 0px;
+    background: linear-gradient(187.37deg, rgba(189, 72, 0, 0.8) 0.51%, rgba(0, 0, 0, 0.8) 99.49%);
+    animation: playListHide 0ms forwards;
+    position: relative;
+    left: -331px;
+    overflow-y: scroll;
+
+}
+
+
+
+.musicPlayerContainer .playlistContainer::-webkit-scrollbar {
+    width: 0px;height: 10px;
+  }
+
+.musicPlayerContainer .playlistContainer .musics{
+    width: 256px;
+    height: 96px;
+    background: linear-gradient(101.02deg, #000000 10.4%, #FF621F 89.6%);
+    border-radius: 50px;
+    margin: 20px auto 0;
+    box-shadow: 0 0 10px white;
+    cursor: pointer;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.musicPlayerContainer .playlistContainer .playlist .musics .information{
+    width: 60%;
+}
+
+.musicPlayerContainer .playlistContainer .playlist .musics .information .musicName{
+    font-size: 20px; 
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: nowrap;
+    font-family: Byekan, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.musicPlayerContainer .playlistContainer .playlist .musics .musicImage{
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.musicPlayerContainer .playlistContainer .fileButtonContainer #fileButton input{
+    display: none;
+}
+.musicPlayerContainer .playlistContainer .fileButtonContainer #fileButton{
+    width: 236px;
+    height: 70px;
+    border-radius: 10px 10px 40px 10px;
+    box-shadow: 0px 0px 15px 3px rgba(255, 255, 255, 0.25);
+    background: linear-gradient(93.61deg, rgba(0, 0, 0, 0.8) 1.05%, rgba(255, 98, 31, 0.8) 98.95%);
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.musicPlayerContainer .playlistContainer .fileButtonContainer{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    margin-top: 20px;
+    bottom: 0px;
+    background: linear-gradient(187.37deg, rgba(189, 72, 0, 0.8) 0.51%, rgba(0, 0, 0, 0.8) 99.49%);
+    cursor: pointer;
+    height: 100px;
+}
+
+
+.musicPlayerContainer .playlistContainer #fileButton:hover{
+    transform: scale(1.05);
+}
+
+
+.musicPlayerContainer .playlistContainer .musics:hover{
+    transform: scale(1.05);
+}
+

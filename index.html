@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.js"></script>
+    <link rel="stylesheet" href="style.css  ">
+    <title>jakal</title>
+</head>
+<body>
+    <div class="musicPlayerContainer">
+        <audio id="audio" src=""></audio>
+        <div class="playerContainer">
+            <div class="musicImage"></div>
+            <div class="musicTitle"></div>
+            <div class="progressBarContainer">
+                <div class="progressBarTime">
+                    <span class="timePassed">0:0</span>
+                    <span class="totalTime">0:0</span>
+                </div>
+                <div class="progressBarCapsool">
+                    <div class="progress">
+                        <span class="circle"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="navigationContainer">
+                <span class="navigation backButton"><svg width="35" height="38" viewBox="0 0 35 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.05907C0 1.51297 0.216937 0.989237 0.603087 0.603087C0.989237 0.216937 1.51297 0 2.05907 0C2.60516 0 3.1289 0.216937 3.51504 0.603087C3.90119 0.989237 4.11813 1.51297 4.11813 2.05907V15.4348L29.9265 0.461231C32.1503 -0.827744 35 0.733028 35 3.32745V33.7357C35 36.3302 32.1503 37.895 29.9265 36.6061L4.11813 21.6325V35.0041C4.11813 35.5502 3.90119 36.074 3.51504 36.4601C3.1289 36.8462 2.60516 37.0632 2.05907 37.0632C1.51297 37.0632 0.989237 36.8462 0.603087 36.4601C0.216937 36.074 0 35.5502 0 35.0041V2.05907Z" fill="white"/>
+                    </svg>
+                    </span>
+                <span class="navigation tenSecondBack"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_23_81)">
+                    <path d="M19.4375 11.5208C21.1042 11.0208 22.9583 10.7083 25 10.7083C34.2083 10.7083 41.6667 18.1042 41.6667 27.2292C41.6667 36.3542 34.2083 43.75 25 43.75C15.7917 43.75 8.33333 36.3542 8.33333 27.2292C8.33333 23.8333 9.37495 20.6667 11.1458 18.0417" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22.3958 6.25L18.8959 11.6458L24.3333 15.1458" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <path d="M21.928 33H19.848V24.664L18.424 25.928L17.288 24.392L20.184 21.768H21.928V33ZM23.6084 27.368C23.6084 26.2587 23.7684 25.272 24.0884 24.408C24.4084 23.5333 24.8884 22.8453 25.5284 22.344C26.179 21.832 26.979 21.576 27.9284 21.576C28.8564 21.576 29.6457 21.832 30.2964 22.344C30.9577 22.8453 31.4537 23.5333 31.7844 24.408C32.115 25.2827 32.2804 26.2693 32.2804 27.368C32.2804 28.4453 32.1097 29.4267 31.7684 30.312C31.4377 31.1973 30.9417 31.9013 30.2804 32.424C29.6297 32.936 28.8457 33.192 27.9284 33.192C27.0217 33.192 26.243 32.9307 25.5924 32.408C24.9417 31.8853 24.4457 31.1813 24.1044 30.296C23.7737 29.4107 23.6084 28.4347 23.6084 27.368ZM25.6884 27.384C25.6884 28.2267 25.795 28.9413 26.0084 29.528C26.2324 30.1147 26.5204 30.552 26.8724 30.84C27.2244 31.1173 27.5924 31.256 27.9764 31.256C28.3817 31.256 28.7497 31.1173 29.0804 30.84C29.4217 30.5627 29.6937 30.136 29.8964 29.56C30.099 28.9733 30.2004 28.248 30.2004 27.384C30.2004 26.52 30.0937 25.8 29.8804 25.224C29.6777 24.6373 29.4057 24.2053 29.0644 23.928C28.7337 23.6507 28.371 23.512 27.9764 23.512C27.571 23.512 27.1924 23.656 26.8404 23.944C26.499 24.2213 26.2217 24.6533 26.0084 25.24C25.795 25.816 25.6884 26.5307 25.6884 27.384Z" fill="white"/>
+                    <defs>
+                    <clipPath id="clip0_23_81">
+                    <rect width="50" height="50" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    </span>
+                <span class="navigation play-Pause">
+                    <div class="circle">
+                        <svg fill="#ffffff" height="50px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M500.203,236.907L30.869,2.24c-6.613-3.285-14.443-2.944-20.736,0.939C3.84,7.083,0,13.931,0,21.333v469.333 c0,7.403,3.84,14.251,10.133,18.155c3.413,2.112,7.296,3.179,11.2,3.179c3.264,0,6.528-0.747,9.536-2.24l469.333-234.667 C507.435,271.467,512,264.085,512,256S507.435,240.533,500.203,236.907z"></path> </g> </g> </g></svg>  
+                    </div>
+                </span>
+                <span class="navigation tenSecondNext"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_23_82)">
+                    <path d="M30.5625 11.5208C28.8958 11.0208 27.0417 10.7083 25 10.7083C15.7917 10.7083 8.33333 18.1042 8.33333 27.2292C8.33333 36.3542 15.7917 43.75 25 43.75C34.2083 43.75 41.6667 36.3542 41.6667 27.2292C41.6667 23.8333 40.625 20.6667 38.8542 18.0417" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M27.6042 6.25L31.1042 11.6458L25.6667 15.1458" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <path d="M21.928 33H19.848V24.664L18.424 25.928L17.288 24.392L20.184 21.768H21.928V33ZM23.6084 27.368C23.6084 26.2587 23.7684 25.272 24.0884 24.408C24.4084 23.5333 24.8884 22.8453 25.5284 22.344C26.179 21.832 26.979 21.576 27.9284 21.576C28.8564 21.576 29.6457 21.832 30.2964 22.344C30.9577 22.8453 31.4537 23.5333 31.7844 24.408C32.115 25.2827 32.2804 26.2693 32.2804 27.368C32.2804 28.4453 32.1097 29.4267 31.7684 30.312C31.4377 31.1973 30.9417 31.9013 30.2804 32.424C29.6297 32.936 28.8457 33.192 27.9284 33.192C27.0217 33.192 26.243 32.9307 25.5924 32.408C24.9417 31.8853 24.4457 31.1813 24.1044 30.296C23.7737 29.4107 23.6084 28.4347 23.6084 27.368ZM25.6884 27.384C25.6884 28.2267 25.795 28.9413 26.0084 29.528C26.2324 30.1147 26.5204 30.552 26.8724 30.84C27.2244 31.1173 27.5924 31.256 27.9764 31.256C28.3817 31.256 28.7497 31.1173 29.0804 30.84C29.4217 30.5627 29.6937 30.136 29.8964 29.56C30.099 28.9733 30.2004 28.248 30.2004 27.384C30.2004 26.52 30.0937 25.8 29.8804 25.224C29.6777 24.6373 29.4057 24.2053 29.0644 23.928C28.7337 23.6507 28.371 23.512 27.9764 23.512C27.571 23.512 27.1924 23.656 26.8404 23.944C26.499 24.2213 26.2217 24.6533 26.0084 25.24C25.795 25.816 25.6884 26.5307 25.6884 27.384Z" fill="white"/>
+                    <defs>
+                    <clipPath id="clip0_23_82">
+                    <rect width="50" height="50" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+                    </span>
+                <span class="navigation nexButton"><svg width="35" height="38" viewBox="0 0 35 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 2.05882C35 1.51279 34.7831 0.98912 34.397 0.603016C34.0109 0.216912 33.4872 0 32.9412 0C32.3951 0 31.8715 0.216912 31.4854 0.603016C31.0993 0.98912 30.8824 1.51279 30.8824 2.05882V15.4329L5.07706 0.461176C2.85353 -0.82353 0 0.732942 0 3.32706V33.7318C0 36.3259 2.84941 37.8906 5.07706 36.6018L30.8824 21.63V35C30.8824 35.546 31.0993 36.0697 31.4854 36.4558C31.8715 36.8419 32.3951 37.0588 32.9412 37.0588C33.4872 37.0588 34.0109 36.8419 34.397 36.4558C34.7831 36.0697 35 35.546 35 35V2.05882Z" fill="white"/>
+                    </svg>
+                    </span>
+            </div>
+            <div class="playListButton">
+                لیست پخش موزیک
+            </div>
+        </div>
+        <div class="playlistContainer">
+            <div class="playlist"></div>
+            <div class="fileButtonContainer">
+                <div id="fileButton">
+                    <label>
+                     <input id="fileInput" type="file" multiple>
+                     <span>اضافه کردن موزیک</span>
+                      </label>
+                 </div>
+                </div>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
